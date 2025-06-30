@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Developer Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body class="font-sans bg-gray-50 text-gray-800">
+    <!-- Navigation -->
+    <header class="fixed w-[95vw] bg-white shadow-sm z-50">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#home" class="text-2xl font-bold text-purple-600">TheoKodar Dev Portfolio</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="text-gray-700 hover:text-purple-600 transition">Home</a>
+                <a href="#skills" class="text-gray-700 hover:text-purple-600 transition">Skills</a>
+                <a href="#experience" class="text-gray-700 hover:text-purple-600 transition">Experience</a>
+                <a href="#employment" class="text-gray-700 hover:text-purple-600 transition">Employment</a>
+                <a href="#works" class="text-gray-700 hover:text-purple-600 transition">Works</a>
+                <a href="#contact" class="text-gray-700 hover:text-purple-600 transition">Contact</a>
+            </div>
+            <button class="md:hidden focus:outline-none" id="mobile-menu-button">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
+                    </path>
+                </svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div class="hidden md:hidden bg-white shadow-lg" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home"
+                    class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-purple-600">Home</a>
+                <a href="#skills"
+                    class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-purple-600">Skills</a>
+                <a href="#experience"
+                    class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-purple-600">Experience</a>
+                <a href="#employment"
+                    class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-purple-600">Employment</a>
+                <a href="#works"
+                    class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-purple-600">Works</a>
+                <a href="#contact"
+                    class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-purple-600">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg min-h-screen flex items-center justify-center pt-20 pb-20">
+        <div class="container mx-auto px-6 text-center md:text-left">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 fade-in">
+                    <h1 class="text-4xl md:text-5xl font-bold text-white mb6">Hi, I'm <span class="text-purple-200">Theo
+                            Rakomane</span></h1>
+                    <h2 class="text-2xl md:text-3xl font-semibold text-purple-100 mb-6">Frontend Web Developer</h2>
+                    <p class="text-white text-lg mb-8 max-w-lg mx-auto md:mx-0">
+                        I build exceptional digital experiences with modern web technologies.
+                        Passionate about creating responsive, performant, and accessible web applications.
+                    </p>
+                    <div
+                        class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center md:justify-start">
+                        <a href="#contact"
+                            class="px-8 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition">
+                            Hire Me
+                        </a>
+                        <a href="assets/CV Tebogo Rakomane.pdf" download rel="noopener noreferrer"
+                            class="px-8 py-3 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition flex items-center justify-center">DOWNLOAD CV <i class="fas fa-download mr-2"></i> </a>
+                        
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center fade-in">
+                    <div
+                        class="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white shadow-xl">
+                        <img src="assets/images/Profile_picture.jpg" alt="Profile" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+            <div class="mt-16 flex justify-center space-x-6">
+                <a href="https://github.com/TheoKoder" target="_blank" rel="noopener noreferrer"
+                    class="text-white hover:text-purple-200 text-2xl transition">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/tebogo-rakomane-6468071b2/" target="_blank"
+                    rel="noopener noreferrer" class="text-white hover:text-purple-200 text-2xl transition">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://www.hackerrank.com/profile/t_rakomane55" target="_blank" rel="noopener noreferrer"
+                    class="text-white hover:text-purple-200 text-2xl transition">
+                    <i class="fab fa-hackerrank"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16 section-title">My Skills</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Frontend Skills -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md skill-card transition transform hover:shadow-lg">
+                    <div class="text-purple-600 text-4xl mb-4 flex items-center">
+                        <i class="fas fa-laptop-code mr-3"></i>
+                        <h3 class="text-xl font-semibold">Frontend</h3>
+                    </div>
+                    <div class="space-y-4 mt-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-700">HTML5 & CSS3</span>
+                                <span class="text-gray-600">95%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-purple-600 h-2 rounded-full" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-700">TailwindCSS</span>
+                                <span class="text-gray-600">95%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-purple-600 h-2 rounded-full" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-700">TypeScript</span>
+                                <span class="text-gray-600">70%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-purple-600 h-2 rounded-full" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-700">JavaScript</span>
+                                <span class="text-gray-600">88%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-purple-600 h-2 rounded-full" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-700">React.js</span>
+                                <span class="text-gray-600">88%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-purple-600 h-2 rounded-full" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-700">Angular.js</span>
+                                <span class="text-gray-600">85%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-purple-600 h-2 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Backend Skills -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md skill-card transition transform hover:shadow-lg">
+                    <div class="text-purple-600 text-4xl mb-4 flex items-center">
+                        <i class="fas fa-server mr-3"></i>
+                        <h3 class="text-xl font-semibold">Backend</h3>
+                    </div>
+                    <div class="space-y-4 mt-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-700">Node.js</span>
+                                <span class="text-gray-600">80%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-purple-600 h-2 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-700">Express.js</span>
+                                <span class="text-gray-600">75%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-purple-600 h-2 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-700">MSSQL</span>
+                                <span class="text-gray-600">70%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-purple-600 h-2 rounded-full" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-700">Python/Django</span>
+                                <span class="text-gray-600">65%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-purple-600 h-2 rounded-full" style="width: 65%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-700">MongoDB</span>
+                                <span class="text-gray-600">75%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-purple-600 h-2 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Other Skills -->
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md skill-card transition transform hover:shadow-lg">
+                    <div class="text-purple-600 text-4xl mb-4 flex items-center">
+                        <i class="fas fa-tools mr-3"></i>
+                        <h3 class="text-xl font-semibold">Other</h3>
+                    </div>
+                    <div class="space-y-4 mt-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-700">Git/Version Control</span>
+                                <span class="text-gray-600">90%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-purple-600 h-2 rounded-full" style="width: 90%"></div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-gray-700">NPM package Management</span>
+                                    <span class="text-gray-600">85%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                    <div class="bg-purple-600 h-2 rounded-full" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-gray-700">Docker</span>
+                                    <span class="text-gray-600">65%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                    <div class="bg-purple-600 h-2 rounded-full" style="width: 65%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-gray-700">Azure</span>
+                                    <span class="text-gray-600">70%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                    <div class="bg-purple-600 h-2 rounded-full" style="width: 70%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-gray-700">AI</span>
+                                    <span class="text-gray-600">70%</span>
+                                </div>
+                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                    <div class="bg-purple-600 h-2 rounded-full" style="width: 70%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16 section-title">My Experience</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
+                    <div class="text-purple-600 text-4xl mb-4">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">3+ Years</h3>
+                    <p class="text-gray-600">Web Development Experience</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
+                    <div class="text-purple-600 text-4xl mb-4">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">5+ Clients</h3>
+                    <p class="text-gray-600">Worked with various clients across industries</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Employment Section -->
+    <section id="employment" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16 section-title">Employment History</h2>
+
+            <div class="space-y-8 max-w-3xl mx-auto">
+                <!-- Job 1 -->
+                <div class="p-6 border-l-4 border-purple-600 bg-gray-50 rounded-r-lg shadow-sm">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-center">
+                        <div>
+                            <h3 class="text-xl font-semibold">Cloud/Frontend engineer</h3>
+                            <h4 class="text-gray-600">Purplewire.co.za, Johannesburg</h4>
+                        </div>
+                        <span class="text-gray-500 mt-2 md:mt-0">Nov 2024 - June 2025</span>
+                    </div>
+                    <ul class="mt-4 list-disc list-inside text-gray-600 space-y-2">
+                        <li>Managed packages, handled versioning, and maintained consistency across the codebase using
+                            NPM. Experience in managing Angular workspaces and customizing build configurations. </li>
+                        <li>Saved time and resources by identifying and fixing bugs before product deployment.</li>
+                        <li>Wrote custom code to handle complex business logic and data processing.</li>
+                        <li>Implemented responsive designs for mobile, and cross-browser compatibility.</li>
+                        <li>Optimized frontend performance, improving page load times by 50%</li>
+                    </ul>
+                </div>
+
+                <!-- Job 2 -->
+                <div class="p-6 border-l-4 border-purple-600 bg-gray-50 rounded-r-lg shadow-sm">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-center">
+                        <div>
+                            <h3 class="text-xl font-semibold">Software Developer (REMOTE)</h3>
+                            <h4 class="text-gray-600">coassolutions.co.za</h4>
+                        </div>
+                        <span class="text-gray-500 mt-2 md:mt-0">Jan 2024 - June 2024</span>
+                    </div>
+                    <ul class="mt-4 list-disc list-inside text-gray-600 space-y-2">
+                        <li>Improved software efficiency by troubleshooting and resolving coding issues.</li>
+                        <li>Saved time and resources by identifying and fixing bugs before product deployment.</li>
+                        <li>Participated in morning sprints and midday sprints to make sure project delivery was meeting
+                            time schedules.</li>
+                        <li>Contributed to a positive team environment through effective communication, problem-solving,
+                            and collaboration skills.</li>
+                        <li>Collaborated with cross-functional teams to deliver high-quality products on tight deadlines
+                        </li>
+                        <li>Fixed bugs and improved existing code quality</li>
+                    </ul>
+                </div>
+
+                <!-- Job 3 -->
+                <div class="p-6 border-l-4 border-purple-600 bg-gray-50 rounded-r-lg shadow-sm">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-center">
+                        <div>
+                            <h3 class="text-xl font-semibold">Freelance Web Developer</h3>
+                            <h4 class="text-gray-600">BLO (NPO), Johannesburg</h4>
+                        </div>
+                        <span class="text-gray-500 mt-2 md:mt-0">Jun 2023 - Nov 2023</span>
+                    </div>
+                    <ul class="mt-4 list-disc list-inside text-gray-600 space-y-2">
+                        <li>Built a Website to increase internet footprint and digital presence by over 25% in just 12
+                            months.</li>
+                        <li>Continuously updated skills through training courses, workshops, and selfstudy—staying
+                            current on industry trends and emerging technologies.</li>
+                        <li>Worked closely with clients to gather requirements and translate them into technical
+                            specifications for implementation.</li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Works Section -->
+    <section id="works" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16 section-title">My Works</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+               <!-- Project 1 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md work-card">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="assets/images/Jolinkomo_.png" alt="Project 2" class="w-full h-full object-cover">
+                        <div
+                            class="absolute inset-0 bg-purple-600 bg-opacity-75 flex items-center justify-center opacity-0 work-overlay">
+                            <a href="https://jolinkomo-website.pages.dev/" target="_blank" rel="noopener noreferrer"
+                                class="text-white font-semibold px-4 py-2 border border-white rounded hover:bg-white hover:text-purple-600 transition">View
+                                Details</a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Jolinkomo Website</h3>
+                        <p class="text-gray-600 mb-4">SPA website for Jolinkomo, an SME construction company from
+                            Carletonville town in Johannesburg, South Africa.This website taught me a lot about how to build a website from scratch, develop using
+                            React.js, how to interact with clients to translate visions into reality, to modulary
+                            importing of images, how to write clean and reusable components,
+                            properly make use of prop-types, how to implement DARK MODE, and how to use the multiple
+                    libraries available in React.js. THE CLIENT ULTIMATELY COULD NOT PAY ME FOR THIS PROJECT, AND I STOPPED WORKING ON IT THEREAFTER.
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs bg-purple-100 text-purple-800 px-2 py-1 rounded">React.js</span>
+                            <span class="text-xs bg-purple-100 text-purple-800 px-2 py-1 rounded">JavaScript</span>
+                            <span class="text-xs bg-purple-100 text-purple-800 px-2 py-1 rounded">TailwindCss + custom
+                                plugins</span>
+                            <span class="text-xs bg-purple-100 text-purple-800 px-2 py-1 rounded">React-scroll</span>
+                        </div>
+                    </div>
+                </div> 
+                <!-- Project 2 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md work-card">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="assets/images/Blo.png" alt="Project 1" class="w-full h-full object-cover">
+                        <div
+                            class="absolute inset-0 bg-purple-600 bg-opacity-75 flex items-center justify-center opacity-0 work-overlay">
+                            <a href="https://blackladiesorganization.pages.dev/" target="_blank"rel="noopener noreferrer"
+                                class="text-white font-semibold px-4 py-2 border border-white rounded hover:bg-white hover:text-purple-600 transition">View
+                                Details</a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">BLO website</h3>
+                        <p class="text-gray-600 mb-4">Web application for the "Black Ladies Organization" a Non-profit
+                            Organization in South Africa, from a small town known as Carletonville,Johannesburg. The
+                            website was built using React.js, it also had paypal integration, and a payment gateway. The
+                            client suggested I remove the payment gateway, and I did so. The website is still live and
+                            running.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs bg-purple-100 text-purple-800 px-2 py-1 rounded">React</span>
+                            <span class="text-xs bg-purple-100 text-purple-800 px-2 py-1 rounded">JavaScript</span>
+                            <span
+                                class="text-xs bg-purple-100 text-purple-800 px-2 py-1 rounded">React-router-dom</span>
+                            <span class="text-xs bg-purple-100 text-purple-800 px-2 py-1 rounded">Framer-motion</span>
+                            <span
+                                class="text-xs bg-purple-100 text-purple-800 px-2 py-1 rounded">React-intersection-observer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md work-card">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="assets/images/coas_.png" alt="Project 3" class="w-full h-full object-cover">
+                        <div
+                            class="absolute inset-0 bg-purple-600 bg-opacity-75 flex items-center justify-center opacity-0 work-overlay">
+                            <a href="https://coassolutions.co.za/projects.html" target="_blank" rel="noopener noreferrer"
+                                class="text-white font-semibold px-4 py-2 border border-white rounded hover:bg-white hover:text-purple-600 transition">View
+                                Details</a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">coassolutions.co.za</h3>
+                        <p class="text-gray-600 mb-4">projects I collaboratived in at COAS, please do visit site to find
+                            some I have managed and contributed to namely: CTC, SYEM Agency and The Resilience Coach
+                            (initial stages)</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs bg-purple-100 text-purple-800 px-2 py-1 rounded">Vanilla JS</span>
+                            <span class="text-xs bg-purple-100 text-purple-800 px-2 py-1 rounded">CSS3</span>
+                            <span class="text-xs bg-purple-100 text-purple-800 px-2 py-1 rounded">HTML5</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 4-->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md work-card">
+                    <div class="relative h-md overflow-hidden">
+                        <img src="assets/images/DAT.png" alt="Project 3" class="w-full h-full object-cover">
+                        <div
+                            class="absolute inset-0 bg-purple-600 bg-opacity-75 flex items-center justify-center opacity-0 work-overlay">
+                            <a href="https://github.com/TheoKoder/old_frontend"
+                                class="text-white font-semibold px-4 py-2 border border-white rounded hover:bg-white hover:text-purple-600 transition">View
+                                Details</a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Live Asset Tracker (e-Gov)</h3>
+                        <p class="text-gray-600 mb-4">A website to track and manage gauteng e-gov asssets (employee
+                            Laptops, Equipment and other assets),built using Angular.js. Site makes use of Nginx reverse
+                            proxy to avoid CORS issues. Dockerized and hosted on Azure. Styled with Angular Material and
+                            TailwindCSS, has cross-browser compatibility and Addresses partially blind individuals at
+                            eGov accessibility. UNFORTUNATELY SITE IS BEHIND A FIREWALL, AND IS NOT ACCESSIBLE OUTSIDE
+                            OF THE GOVERNMENT NETWORK, I have however linked to github repo where most of code I
+                            contributed to is.</p>
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs bg-purple-100 text-purple-800 px-2 py-1 rounded">Angular.js</span>
+                            <span class="text-xs bg-purple-100 text-purple-800 px-2 py-1 rounded">SASS</span>
+                            <span class="text-xs bg-purple-100 text-purple-800 px-2 py-1 rounded">TypeScript</span>
+                            <span class="text-xs bg-purple-100 text-purple-800 px-2 py-1 rounded">TailwindCSS</span>
+                            <span class="text-xs bg-purple-100 text-purple-800 px-2 py-1 rounded">NginX</span>
+                            <span class="text-xs bg-purple-100 text-purple-800 px-2 py-1 rounded">Docker</span>
+                            <span class="text-xs bg-purple-100 text-purple-800 px-2 py-1 rounded">Azure</span>
+                            <span class="text-xs bg-purple-100 text-purple-800 px-2 py-1 rounded">Angular
+                                Material</span>
+                            <span class="text-xs bg-purple-100 text-purple-800 px-2 py-1 rounded">Laveral</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="https://wac-a-mole.pages.dev/" target="_blank" rel="noopener noreferrer"
+                    class="px-8 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition inline-block">
+                    Side Project
+                </a>
+            </div>
+        </div>
+        </div>
+
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16 section-title">Get In Touch</h2>
+
+            <div class="flex flex-col md:flex-row gap-12 max-w-6xl mx-auto">
+                <div class="md:w-1/2">
+                    <h3 class="text-xl font-semibold mb-4">Contact Information</h3>
+                    <p class="text-gray-600 mb-6">Do you like what you have seen? Do get in touch. You are able to
+                        contact me directly through the email form, and I will get back to you as soon as possible.
+                        THANK YOU for visiting my site. 😁🙌</p>
+
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="text-purple-600 mr-4 mt-1">
+                                <i class="fas fa-envelope text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">Email</h4>
+                                <p class="text-gray-600">t.rakomane55@gmail.com</p></a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="text-purple-600 mr-4 mt-1">
+                                <i class="fas fa-phone-alt text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">Phone</h4>
+                                <p class="text-gray-600">069 112 2557</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="text-purple-600 mr-4 mt-1">
+                                <i class="fas fa-map-marker-alt text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">Location</h4>
+                                <p class="text-gray-600">Johannesburg, South Africa</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <h4 class="font-medium mb-4">Follow Me</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-gray-600 hover:text-purple-600 transition">
+                                <i class="fab fa-github fa-lg"></i>
+                            </a>
+                            <a href="#" class="text-gray-600 hover:text-purple-600 transition">
+                                <i class="fab fa-linkedin fa-lg"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="md:w-1/2">
+                    <form class="space-y-6" onsubmit="handleSubmit(event)">
+                        <div>
+                            <label for="name" class="block text-gray-700 mb-1">Your Name</label>
+                            <input type="text" id="name"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                                required>
+                        </div>
+
+                        <div>
+                            <label for="email" class="block text-gray-700 mb-1">Your Email</label>
+                            <input type="email" id="email"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                                required>
+                        </div>
+
+                        <div>
+                            <label for="subject" class="block text-gray-700 mb-1">Subject</label>
+                            <input type="text" id="subject"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                                required>
+                        </div>
+
+                        <div>
+                            <label for="message" class="block text-gray-700 mb-1">Message</label>
+                            <textarea id="message" rows="5"
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                                required></textarea>
+                        </div>
+
+                        <button type="submit"
+                            class="w-full px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <a href="#" class="text-2xl font-bold text-purple(400)">Dev Portfolio</a>
+                    <p class="text-gray-400 mt-1">© 2025 All Rights Reserved</p>
+                </div>
+
+                <div class="flex space-x-6">
+                    <a href="https://github.com/TheoKoder" target="_blank" rel="noopener noreferrer"
+                    class="text-white hover:text-purple-200 text-2xl transition">
+                    <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/tebogo-rakomane-6468071b2/" target="_blank"
+                    rel="noopener noreferrer" class="text-white hover:text-purple-200 text-2xl transition">
+                    <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <p
+        style="border-radius: 8px; text-align: center; font-size: 12px; color: #fff; margin-top: 16px;position: fixed; left: 8px; bottom: 8px; z-index: 10; background: rgba(0, 0, 0, 0.8); padding: 4px 8px;">
+        Made By TheoKodar | ™ </p>
+</body>
+
+</html>
